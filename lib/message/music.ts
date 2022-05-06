@@ -47,7 +47,7 @@ async function getMiGuSong(id: string) {
 }
 
 async function getKuGouSong(id: string) {
-	let url = `https://wwwapi.kugou.com/yy/index.php?r=play/getdata&callback=&hash=${id}&dfid=&mid=${id}&platid=4&_=${+new Date()}&album_id=`
+	let url = `https://wwwapi.kugou.com/yy/index.php?r=play/getdata&callback=&hash=${id}&dfid=&mid=&platid=4&_=${+new Date()}&album_id=`
 	let rsp: any = await axios.get(url, { responseType: "json" })
 	rsp = rsp.data.data
 	url += rsp.album_id
